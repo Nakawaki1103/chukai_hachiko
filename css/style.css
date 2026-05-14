@@ -236,6 +236,25 @@ a {
     animation: bounce 2s ease-in-out infinite;
 }
 
+.hero-area-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--dark-color);
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: var(--spacing-md);
+    border: 2px solid var(--primary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.hero-area-badge i {
+    color: var(--primary-color);
+}
+
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
@@ -1032,7 +1051,7 @@ a {
    お問い合わせCTA
    ============================================ */
 .contact-section {
-    background: linear-gradient(135deg, #FF6B35 0%, #FFD23F 50%, #00D9FF 100%);
+    background: var(--primary-color);
     color: var(--white);
     padding: var(--spacing-xl) 0;
 }
@@ -1051,11 +1070,9 @@ a {
 }
 
 .contact-title .highlight-text {
-    background: var(--white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    background: none;
+    -webkit-text-fill-color: var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 .contact-subtitle {
@@ -1096,6 +1113,74 @@ a {
 
 .cta-contact:hover {
     transform: translateY(-4px) scale(1.05);
+}
+
+.cta-disabled {
+    background: rgba(0, 0, 0, 0.25) !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    cursor: not-allowed !important;
+    pointer-events: none;
+    box-shadow: none !important;
+    transform: none !important;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* チェックリスト */
+.apply-requirements {
+    background: rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto var(--spacing-md);
+}
+
+.requirements-title {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.requirement-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.6rem 0;
+    cursor: pointer;
+}
+
+.requirement-item + .requirement-item {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.requirement-check {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    margin-top: 1px;
+    accent-color: #FFD23F;
+    cursor: pointer;
+}
+
+.requirement-text {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.requirements-note {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.8rem;
+    margin-top: var(--spacing-sm);
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .contact-note {

@@ -209,6 +209,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ============================================
+    // 申し込み前チェックリスト
+    // ============================================
+    const requirementChecks = document.querySelectorAll('.requirement-check');
+    const lineCtaBtn = document.getElementById('lineCtaBtn');
+
+    if (requirementChecks.length > 0 && lineCtaBtn) {
+        function updateLineButton() {
+            const allChecked = [...requirementChecks].every(cb => cb.checked);
+            lineCtaBtn.classList.toggle('cta-disabled', !allChecked);
+        }
+
+        requirementChecks.forEach(cb => cb.addEventListener('change', updateLineButton));
+        updateLineButton();
+    }
+
+    // ============================================
     // CTAボタンのクリックトラッキング（分析用）
     // ============================================
     const ctaButtons = document.querySelectorAll('.cta-button');

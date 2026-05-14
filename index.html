@@ -35,6 +35,9 @@
                 <div class="hero-badge">
                     <i class="fas fa-star"></i> 仲介手数料 無料 or 半額！
                 </div>
+                <div class="hero-area-badge">
+                    <i class="fas fa-map-marker-alt"></i> 対応エリア：東京都内23区限定
+                </div>
                 <h1 class="hero-title">
                     あなたが見つけた物件、<br>
                     <span class="highlight-text">最安値で契約</span>します！
@@ -539,6 +542,8 @@
                     <i class="fas fa-info-circle"></i> ご利用にあたっての注意事項
                 </h3>
                 <ul class="notice-list">
+                    <li>対応エリアは<strong>東京都内23区</strong>のみとなります。</li>
+                    <li>現在、他の物件に申し込み済みの方はご利用いただけません。</li>
                     <li>仲介手数料が無料になるのは、貸主様から手数料をいただける物件に限ります。</li>
                     <li>一部の物件（大家直接契約、専任物件等）は対応できない場合がございます。</li>
                     <li>物件の空室状況により、ご案内できない場合があります。</li>
@@ -579,7 +584,22 @@
                     </div>
                 </div>
 
-                <a href="https://line.me/R/ti/p/@example" class="cta-button cta-contact" target="_blank" rel="noopener">
+                <div class="apply-requirements">
+                    <p class="requirements-title">
+                        <i class="fas fa-clipboard-check"></i> 友達追加前にご確認ください
+                    </p>
+                    <label class="requirement-item">
+                        <input type="checkbox" class="requirement-check" id="req1">
+                        <span class="requirement-text">現在、他の物件に申し込みをしていません</span>
+                    </label>
+                    <label class="requirement-item">
+                        <input type="checkbox" class="requirement-check" id="req2">
+                        <span class="requirement-text">探している物件は東京都内23区内です</span>
+                    </label>
+                    <p class="requirements-note">※すべてチェックするとLINEボタンが有効になります</p>
+                </div>
+
+                <a href="https://line.me/R/ti/p/@example" class="cta-button cta-contact cta-disabled" id="lineCtaBtn" target="_blank" rel="noopener">
                     <i class="fab fa-line"></i>
                     <span>LINE友達追加で今すぐ相談</span>
                     <i class="fas fa-external-link-alt"></i>
